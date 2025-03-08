@@ -1,114 +1,49 @@
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbvvvvvvvvvvvvvvvvvbody {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    height: 100vh;
-    margin: 0;
+body {
+    font-family: Arial, sans-serif;
+    background: #181818;
+    color: #fff;
     display: flex;
     justify-content: center;
-    a nlign-items: center;
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: relative;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-h1 {
-    font-size: 4.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #fff, #ccc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    line-height: 1.8;
-    text-align: center;
-}
+
 .container {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    color: black;
-    width: 400px;
     text-align: center;
-    margin-bottom: 30px;
+    background: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
 }
-.landing-page {
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
-    margin-bottom: 50px;
-    width: 100%;
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
-.hidden {
-    display: none;
+
+input[type="file"] {
+    margin-bottom: 20px;
 }
-input, select, button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
+
+ul {
+    list-style: none;
+    padding: 0;
 }
-button {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
+
+li {
     padding: 10px;
-}
-button:hover {
-    background: linear-gradient(135deg, #764ba2, #667eea);
-    transform: translateY(-3px);
-}
-.get-started-btn {
-    padding: 20px 50px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #ff8c00, #ff0080);
-    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.5);
-}
-.get-started-btn:hover {
-    background: linear-gradient(135deg, #ff0080, #ff8c00);
-    transform: scale(1.1);
-}
-.small-button {
-    font-size: 0.8rem;
-    padding: 8px 12px;
-    width: auto;
-    border-radius: 20px;
-}
-.toggle-link {
-    background: none;
-    border: none;
-    color: #667eea;
+    background: #383838;
+    margin-bottom: 10px;
     cursor: pointer;
-    font-size: 0.9rem;
+    border-radius: 5px;
 }
-.falling-notes div {
-    position: absolute;
-    top: 0;
-    font-size: 2rem;
-    animation: fall 5s linear infinite;
+
+li:hover {
+    background: #484848;
 }
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+
+audio {
+    width: 100%;
+    margin-top: 20px;
 }
