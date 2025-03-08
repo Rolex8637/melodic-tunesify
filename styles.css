@@ -1,74 +1,114 @@
-body {
-    font-family: Arial, sans-serif;
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbvvvvvvvvvvvvvvvvvbody {
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    a nlign-items: center;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
 }
-
-header h1 {
-    font-size: 2.5rem;
+h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
     margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-#getStarted {
-    padding: 10px 20px;
+p {
     font-size: 1.2rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.8;
+    text-align: center;
 }
-
-#getStarted:hover {
-    background: linear-gradient(135deg, #764ba2, #667eea);
-}
-
-#formContainer {
-    display: none;
+.container {
     background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     color: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 30px;
 }
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input, .form-group select {
+.landing-page {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    margin-bottom: 50px;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
-
-.submit-btn {
+.hidden {
+    display: none;
+}
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+button {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    padding: 10px;
 }
-
-.toggle-form span {
+button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: translateY(-3px);
+}
+.get-started-btn {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff8c00, #ff0080);
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.5);
+}
+.get-started-btn:hover {
+    background: linear-gradient(135deg, #ff0080, #ff8c00);
+    transform: scale(1.1);
+}
+.small-button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    width: auto;
+    border-radius: 20px;
+}
+.toggle-link {
+    background: none;
+    border: none;
     color: #667eea;
     cursor: pointer;
-    text-decoration: underline;
+    font-size: 0.9rem;
+}
+.falling-notes div {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    animation: fall 5s linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
