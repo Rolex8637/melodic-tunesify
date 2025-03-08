@@ -18,7 +18,10 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <a href="#" class="btn">Sign In</a>
+        <div class="auth-buttons">
+            <button onclick="openModal('login')">Login</button>
+            <button onclick="openModal('signup')">Sign Up</button>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -31,12 +34,59 @@
     <!-- Falling Music Notes -->
     <div class="music-notes"></div>
 
-    <!-- Pool -->
+    <!-- Playlists -->
+    <section class="playlists">
+        <h2>Trending Playlists</h2>
+        <div class="playlist-container">
+            <div class="playlist" onclick="playSong('song1.mp3')">Vibe Hits 🎧</div>
+            <div class="playlist" onclick="playSong('song2.mp3')">Chill Beats 🌊</div>
+            <div class="playlist" onclick="playSong('song3.mp3')">Pop Anthems 🔥</div>
+        </div>
+    </section>
+
+    <!-- Glowing Pool -->
     <div class="pool">
-        <h2>🎼 The Music Pool 🎶</h2>
+        <h2>The Music Pool 🎼</h2>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio id="audioPlayer" controls>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Authentication Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login')">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label>Email:</label>
+                <input type="email" required>
+                <label>Password:</label>
+                <input type="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signup')">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <label>Username:</label>
+                <input type="text" required>
+                <label>Email:</label>
+                <input type="email" required>
+                <label>Password:</label>
+                <input type="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-  
