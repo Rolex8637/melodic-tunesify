@@ -1,73 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodic Tunesify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Melodic Tunesify</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Playlists</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn">Sign In</a>
+    </header>
 
-body {
-    background: #121212;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Experience Music Like Never Before</h1>
+        <p>Stream your favorite tracks with crystal-clear quality.</p>
+        <a href="#" class="btn explore-btn">Explore Now</a>
+    </section>
 
-.landing-page {
-    text-align: center;
-    z-index: 2;
-}
+    <!-- Falling Music Notes -->
+    <div class="music-notes"></div>
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
+    <!-- Pool -->
+    <div class="pool">
+        <h2>🎼 The Music Pool 🎶</h2>
+    </div>
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1rem;
-    color: #fff;
-    background: #ff5f5f;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background: #e04e4e;
-}
-
-/* Falling music notes */
-.music-notes {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.note {
-    position: absolute;
-    top: -10%;
-    font-size: 2rem;
-    opacity: 0.7;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(110vh);
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
+  
