@@ -1,22 +1,18 @@
 
-    const fileInput = document.getElementById('fileInput');
-const playlist = document.getElementById('playlist');
-const audioPlayer = document.getElementById('audioPlayer');
+  document.addEventListener('DOMContentLoaded', () => {
+    const notes = ['🎵', '🎶', '♫', '♬'];
+    const musicNotes = document.querySelector('.music-notes');
 
-fileInput.addEventListener('change', (event) => {
-    const files = event.target.files;
-    playlist.innerHTML = '';
+    setInterval(() => {
+        const note = document.createElement('div');
+        note.classList.add('note');
+        note.innerText = notes[Math.floor(Math.random() * notes.length)];
+        note.style.left = Math.random() * 100 + 'vw';
+        note.style.animationDuration = Math.random() * 5 + 3 + 's';
+        musicNotes.appendChild(note);
 
-    Array.from(files).forEach(file => {
-        const listItem = document.createElement('li');
-        listItem.textContent = file.name;
-
-        listItem.addEventListener('click', () => {
-            const fileURL = URL.createObjectURL(file);
-            audioPlayer.src = fileURL;
-            audioPlayer.play();
-        });
-
-        playlist.appendChild(listItem);
-    });
+        setTimeout(() => {
+            note.remove();
+        }, 8000);
+    }, 300);
 });
