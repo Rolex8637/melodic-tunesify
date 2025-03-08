@@ -1,4 +1,3 @@
-
 /* General Styles */
 * {
     margin: 0;
@@ -11,9 +10,6 @@ body {
     background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
     color: #fff;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -21,10 +17,8 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 1.5rem 5%;
     background: rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
@@ -45,37 +39,27 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #fff;
-    font-size: 1.1rem;
+    text-decoration: none;
 }
 
-.btn {
-    padding: 0.7rem 1.5rem;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
+.auth-buttons button {
+    background: #2575fc;
+    color: #fff;
     border: none;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    margin-left: 1rem;
     cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 10rem 5%;
-    z-index: 2;
 }
 
 .hero h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
     background: linear-gradient(45deg, #6a11cb, #2575fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -83,12 +67,6 @@ nav ul li a {
 
 .hero p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #eee;
-}
-
-.explore-btn {
-    font-size: 1.2rem;
 }
 
 /* Falling Music Notes */
@@ -98,14 +76,12 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    z-index: 1;
+    z-index: -1;
 }
 
 .note {
     position: absolute;
     font-size: 2rem;
-    opacity: 0.7;
     animation: fall 5s linear infinite;
 }
 
@@ -115,15 +91,62 @@ nav ul li a {
     }
 }
 
+/* Playlists */
+.playlists {
+    text-align: center;
+    padding: 3rem;
+}
+
+.playlist-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.playlist {
+    background: #6a11cb;
+    padding: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 /* Pool */
 .pool {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: #2575fc;
     padding: 5rem 0;
     text-align: center;
     border-top: 5px solid #fff;
 }
 
-.pool h2 {
-    font-size: 3rem;
-    color: #fff;
+/* Music Player */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    padding: 1rem;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
 }
