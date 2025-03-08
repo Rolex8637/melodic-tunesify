@@ -1,23 +1,38 @@
-document.getElementById('getStarted').addEventListener('click', function() {
-    document.getElementById('formContainer').style.display = 'block';
-});
+function showSignUp() {
+    document.getElementById('landingPage').classList.add('hidden');
+    document.getElementById('signupForm').classList.remove('hidden');
+    document.getElementById('fallingNotes').innerHTML = ''; 
+}
 
-document.getElementById('toggleLogin').addEventListener('click', function() {
-    document.getElementById('formContainer').innerHTML = `
-        <h2>Login</h2>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required>
-        </div>
-        <button class="submit-btn">Login</button>
-        <p class="toggle-form">Don't have an account? <span id="toggleSignup">Sign Up</span></p>
-    `;
+function toggleForms() {
+    document.getElementById('signupForm').classList.toggle('hidden');
+    document.getElementById('loginForm').classList.toggle('hidden');
+}
 
-    document.getElementById('toggleSignup').addEventListener('click', function() {
-        location.reload();
-    });
-});
+function startFallingNotes() {
+    const notes = ['\u266A', '\u266B', '\u2669', '\u266C', '\u266D'];
+    const container = document.getElementById('fallingNotes');
+    container.innerHTML = '';
+    
+    for (let i = 0; i < 30; i++) {
+        const note = document.createElement('div');
+        note.textContent = notes[Math.floor(Math.random() * notes.length)];
+        note.style.left = Math.random() * 100 + 'vw';
+        note.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        container.appendChild(note);
+    }
+}
+
+function detectLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            alert(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);
+        }, () => {
+            alert('Unable to retrieve your location');
+        });
+    } else {
+        alert('Geolocation is not supported by your browser');
+    }
+}
+
+startFallingNotes();
