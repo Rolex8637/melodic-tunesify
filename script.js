@@ -1,5 +1,12 @@
+// Music player
+function playSong(song) {
+    const player = document.getElementById('audioPlayer');
+    player.src = `music/${song}`;
+    player.play();
+}
 
-  document.addEventListener('DOMContentLoaded', () => {
+// Falling music notes
+document.addEventListener('DOMContentLoaded', () => {
     const notes = ['🎵', '🎶', '♫', '♬'];
     const musicNotes = document.querySelector('.music-notes');
 
@@ -16,3 +23,12 @@
         }, 8000);
     }, 300);
 });
+
+// Authentication modals
+function openModal(type) {
+    document.getElementById(`${type}Modal`).style.display = 'flex';
+}
+
+function closeModal(type) {
+    document.getElementById(`${type}Modal`).style.display = 'none';
+}
