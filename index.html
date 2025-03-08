@@ -7,39 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Melodic Tunesify</h1>
-    </header>
-    <button id="getStarted">Get Started</button>
-    <div id="formContainer">
-        <h2>Sign Up</h2>
-        <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" placeholder="Enter your full name" required>
-        </div>
-        <div class="form-group">
-            <label for="country">Country</label>
-            <select id="country" required>
-                <option value="">Select your country</option>
-                <option value="United States">United States</option>
-                <option value="Canada">Canada</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Australia">Australia</option>
-                <option value="India">India</option>
-                <option value="Kenya">Kenya</option>
-                <option value="Tanzania">Tanzania</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Germany">Germany</option>
-                <option value="Japan">Japan</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-        </div>
-        <button class="submit-btn">Sign Up</button>
-        <p class="toggle-form">Already have an account? <span id="toggleLogin">Login</span></p>
+    <div class="landing-page" id="landingPage">
+        <h1>Experience the Rhythm of Melodic Tunesify</h1>
+        <p>Immerse yourself in a world of music. Discover new artists, explore trending tracks, and let the rhythm move you. Your musical journey starts here.</p>
+        <button class="get-started-btn" onclick="showSignUp()">Get Started</button>
+        <div class="falling-notes" id="fallingNotes"></div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="container hidden" id="signupForm">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <input type="text" placeholder="Enter your location manually">
+        <button type="button" class="small-button" onclick="detectLocation()">Detect my location</button>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <button class="toggle-link" onclick="toggleForms()">Login</button></p>
+    </div>
+
+    <div class="container hidden" id="loginForm">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <button class="toggle-link" onclick="toggleForms()">Sign Up</button></p>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
