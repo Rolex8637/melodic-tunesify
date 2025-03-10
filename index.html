@@ -4,90 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melodic Tunesify</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Melodic Tunesify</div>
-        <nav>
+    <div class="container">
+        <div class="landing-page">
+            <h1 class="title">Melodic</h1>
+            <h2 class="subtitle">Tunesify</h2>
+            <p class="description">Experience music like never before.</p>
+            <button id="getStartedBtn" class="get-started">Get Started</button>
+        </div>
+        <div id="formContainer" class="form-container hidden">
+            <h2 id="formTitle">Login</h2>
+            <form id="authForm">
+                <div id="usernameField" class="form-group hidden">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+        <footer>
+            <h3>Contact Me</h3>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Playlists</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="https://instagram.com/Y2K_Jumaah" target="_blank">📸 Instagram: @Y2K_Jumaah</a></li>
+                <li><a href="mailto:rolexjuma700@gmail.com">📧 Email: rolexjuma700@gmail.com</a></li>
+                <li><a href="tel:+254729695488">📞 Phone: +254729695488</a></li>
             </ul>
-        </nav>
-        <div class="auth-buttons">
-            <button onclick="openModal('login')">Login</button>
-            <button onclick="openModal('signup')">Sign Up</button>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Experience Music Like Never Before</h1>
-        <p>Stream your favorite tracks with crystal-clear quality.</p>
-        <a href="#" class="btn explore-btn">Explore Now</a>
-    </section>
-
-    <!-- Falling Music Notes -->
-    <div class="music-notes"></div>
-
-    <!-- Playlists -->
-    <section class="playlists">
-        <h2>Trending Playlists</h2>
-        <div class="playlist-container">
-            <div class="playlist" onclick="playSong('song1.mp3')">Vibe Hits 🎧</div>
-            <div class="playlist" onclick="playSong('song2.mp3')">Chill Beats 🌊</div>
-            <div class="playlist" onclick="playSong('song3.mp3')">Pop Anthems 🔥</div>
-        </div>
-    </section>
-
-    <!-- Glowing Pool -->
-    <div class="pool">
-        <h2>The Music Pool 🎼</h2>
+        </footer>
     </div>
-
-    <!-- Music Player -->
-    <div class="music-player">
-        <audio id="audioPlayer" controls>
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-
-    <!-- Authentication Modals -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('login')">&times;</span>
-            <h2>Login</h2>
-            <form>
-                <label>Email:</label>
-                <input type="email" required>
-                <label>Password:</label>
-                <input type="password" required>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('signup')">&times;</span>
-            <h2>Sign Up</h2>
-            <form>
-                <label>Username:</label>
-                <input type="text" required>
-                <label>Email:</label>
-                <input type="email" required>
-                <label>Password:</label>
-                <input type="password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
